@@ -1,0 +1,165 @@
+\documentclass[9pt]{extarticle}
+\usepackage[margin=0.2in]{geometry}
+\usepackage{romannum}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{fontawesome}
+\usepackage{tabularx, colortbl}
+\setlist[itemize]{noitemsep, topsep=0pt}
+\addtolength{\parskip}{-1.5mm}
+\tcbset{
+frame code={}
+center title,
+left=0pt,
+right=0pt,
+top=0pt,
+bottom=0pt,
+colback=gray!40,
+colframe=white,
+width=\dimexpr\textwidth\relax,
+enlarge left by=0mm,
+boxsep=3pt,
+arc=0pt,outer arc=0pt,
+}
+
+\begin{document}
+
+\begin{center}
+{\huge\textbf{Sachin}} \\[2pt]
+\textbf{IIT Kanpur} \,$|$\, \textbf{BTech} \,$|$\, \textbf{2020-24} \\[8pt]
+\begin{tabularx}{\textwidth}{@{}>{\centering\arraybackslash}X
+                                  >{\centering\arraybackslash}X
+                                  >{\centering\arraybackslash}X
+                                  >{\centering\arraybackslash}X@{}}
+  \faPhone\ +91-8960455860
+    & \href{mailto:sachin200830@gmail.com}{sachin200830@gmail.com}
+    & \faGithub\ \href{https://github.com/sachina20}{\texttt{sachina20}}
+    & \faLinkedin\ \href{https://www.linkedin.com/in/sachin-601081200/}{Sachin} \\
+\end{tabularx}
+\end{center}
+\noindent\rule[0.5ex]{\linewidth}{1pt}
+
+\vspace{-4mm}
+
+{\large \textbf{\begin{tcolorbox}\textsc{Summary}\end{tcolorbox}}}
+\vspace{-1mm}
+\begin{itemize}
+    \item Backend engineer (\textbf{1 yr 10 mo}) and \textbf{owner of a Mobile Backend (BFF) service} aggregating \textbf{20+ microservices} for a fintech mutual-fund advisory platform.
+    \item Designed and shipped \textbf{distributed-transaction workflows} on \textbf{Temporal (Saga)}, a \textbf{rule-driven offer engine}, and \textbf{event-driven pipelines} on \textbf{Kafka / Kafka Connect}.
+    \item Strong in \textbf{system design}, \textbf{API contracts}, \textbf{performance tuning}, \textbf{observability}, and \textbf{cost optimization} - led an initiative cutting analytics infra cost from \textbf{\$12k to \$4k / month}.
+    \item Stack: \textbf{Java 21}, \textbf{Spring Boot}, \textbf{MongoDB}, \textbf{Redis}, \textbf{Kafka}, \textbf{Temporal}, \textbf{Snowflake}, \textbf{Grafana}, \textbf{Prometheus}.
+\end{itemize}
+
+\vspace{-2mm}
+
+{\large \textbf{\begin{tcolorbox}\textsc{Work Experience}\end{tcolorbox}}}
+
+\hspace{-1.5mm}\textbf{PowerUp Money} (spun off from Uni Card) $|$ \textit{Software Engineer - Backend (acting SDE-2)}
+\hfill\hfill\textit{Feb'25 - Present}
+
+\vspace{1mm}
+\textbf{\textit{Mobile Backend (BFF) Service - Owner}} \hfill \textit{Java 21, Spring Boot, MongoDB, Redis}
+\begin{itemize}
+    \item \textbf{Owned and led} the Mobile Backend BFF, aggregating \textbf{20+ internal microservices} (portfolio, advisory, KYC, subscription, payments, repayment, notifications) into mobile-ready APIs.
+    \item Architected the \textbf{home-screen orchestration engine} - dynamically assembles personalized tabs and widgets per user persona, reducing client-side branching to near-zero and enabling \textbf{server-driven UI} releases without app store rollouts.
+    \item Built end-to-end \textbf{product onboarding flows} for \textbf{Mutual Funds}, \textbf{P2P}, and \textbf{BNPL} - journey-state management, consent capture, KYC fan-out, and payment screens.
+    \item Engineered an \textbf{AOP-based observability layer} (\texttt{@AccessLog}, \texttt{@FailSafe}, \texttt{@RecordMetric}) for unified logging, circuit-breaking and metrics across the service.
+    \item Introduced \textbf{Redis caching} and \textbf{MongoDB DAO templates} that cut hot-path p99 latency on the home screen and reduced fan-out load on downstream services.
+\end{itemize}
+
+\vspace{1.5mm}
+\textbf{\textit{Subscription Lifecycle Service}} \hfill \textit{Temporal, Saga, Kafka, Razorpay}
+\begin{itemize}
+    \item Designed a \textbf{subscription lifecycle service} (creation, payment, activation, cancellation, refund) using \textbf{Temporal workflows} with the \textbf{Saga pattern} for distributed-transaction compensation across \textbf{6+ microservices}.
+    \item Built a \textbf{dynamic offer engine} using the \textbf{Chain-of-Responsibility} pattern to select personalized plans from \textbf{portfolio value}, \textbf{whitelist rules}, \textbf{family eligibility}, and \textbf{fallback defaults}.
+    \item Implemented a \textbf{pluggable rule-validation framework} and \textbf{Redis-based distributed locking} for safe handling of concurrent subscription requests in a high-throughput fintech environment.
+    \item Integrated \textbf{Razorpay} for the full payment-order lifecycle (creation, polling, refunds) and choreographed cross-service flows over \textbf{Kafka} with repayment, notification, and onboarding services.
+    \item Powers both \textbf{Elite (paid)} and \textbf{Free} subscription tiers in production.
+\end{itemize}
+
+\vspace{1.5mm}
+\textbf{\textit{Fixed Deposit Module \& 3rd-Party Integrations}} \hfill \textit{Spring Boot, MongoDB, Upswing, Hyperverge}
+\begin{itemize}
+    \item Built the \textbf{Fixed Deposit service} integrated with \textbf{Upswing}, owning the \textbf{BFF orchestration layer} that bridges customer-facing journeys with partner contracts.
+    \item Integrated \textbf{Hyperverge} into onboarding for \textbf{fraud and anti-money-laundering (AML)} checks; modeled retries, fallbacks, and audit trails for compliance.
+\end{itemize}
+
+\vspace{1.5mm}
+\textbf{\textit{Event-Driven Platform \& Cost Optimization}} \hfill \textit{Kafka, Kafka Connect, Snowflake}
+\begin{itemize}
+    \item Authored custom \textbf{Kafka producers, consumers, and Kafka Connect connectors} powering data pipelines into analytics and downstream microservices.
+    \item Led design and rollout of an in-house \textbf{Computational Service} that replaced \textbf{Snowflake} for selected workloads, \textbf{reducing infra cost from \$12k to \$4k / month} (\textasciitilde66\% saving).
+    \item Built \textbf{Grafana dashboards} and \textbf{Prometheus alerts} for SLOs on latency, error-rate, throughput, and Kafka consumer lag - shortened MTTR on production incidents.
+\end{itemize}
+
+\vspace{2.5mm}
+\hspace{3.5mm}\textbf{Uni Card} $|$ \textit{Software Engineer (Mobile Backend)}
+\hfill\hfill\textit{Jun'24 - Feb'25}
+\begin{itemize}
+    \item Built the original \textbf{Server-Driven Mobile Backend (Orchestrator)} that talked to downstream services and returned UI-ready response templates - the foundation that later evolved into the PowerUp BFF.
+    \item Designed \textbf{RESTful APIs} in \textbf{Java + Spring Boot} following a microservices architecture, with versioned contracts and backward-compatible evolution.
+    \item Designed and shipped the \textbf{Key Life Event Flow} feature to help users track \textbf{financial-freedom milestones}.
+    \item Drove a strong \textbf{TDD culture} with \textbf{JUnit} and \textbf{Mockito} for unit and integration tests; conducted regular \textbf{MR reviews} for quality and consistency across the squad.
+\end{itemize}
+
+\vspace{2.5mm}
+\hspace{3.5mm}\textbf{PwC India Limited} $|$ \textit{Data Analytics Intern}
+\hfill\hfill\textit{May'23 - Jul'23}
+\begin{itemize}
+    \item Collected \textbf{4{,}200+ tweets} via \textbf{Apify} and \textbf{snscrape} and ran \textbf{Sentiment Analysis} with \textbf{Azure Text Analytics} plus \textbf{zero-shot intent classification} via Hugging Face Transformers.
+    \item Extracted organization mentions with \textbf{spaCy} and shipped an interactive \textbf{Power BI} dashboard surfacing brand perception and competitive insights for stakeholders.
+\end{itemize}
+
+\vspace{-2mm}
+
+{\large \textbf{\begin{tcolorbox}\textsc{Selected Technical Highlights}\end{tcolorbox}}}
+\begin{itemize}
+    \item \textbf{Distributed transactions:} Authored Saga-style Temporal workflows with idempotent activities and compensation handlers across 6+ services.
+    \item \textbf{API design:} Defined contracts for the BFF \textit{wrapper template} that lets the mobile client render any flow without code changes.
+    \item \textbf{Performance:} Combined Redis caching, batched downstream calls, and async fan-out to keep BFF p99 latency in check during peak load.
+    \item \textbf{Reliability:} \texttt{@FailSafe} circuit-breaker + retry annotation, plus structured access logs and metrics for every public endpoint.
+    \item \textbf{Cost:} Analytics workload migration from Snowflake $\rightarrow$ in-house computational service, saving \textbf{\$8k / month}.
+\end{itemize}
+
+\vspace{-2mm}
+
+{\large \textbf{\begin{tcolorbox}\textsc{Technical Skills}\end{tcolorbox}}}
+\vspace{-2mm}
+\begin{itemize}
+    \item[--] \textbf{Languages:} Java (8 / 17 / 21), Python, C, C++, JavaScript, SQL
+    \item[--] \textbf{Backend:} Spring Boot, Spring Cloud, REST, Microservices, BFF, AOP, JUnit, Mockito
+    \item[--] \textbf{Datastores:} MongoDB, Redis, MySQL, Snowflake
+    \item[--] \textbf{Messaging \& Workflow:} Apache Kafka, Kafka Connect, Temporal (Workflows / Activities / Saga)
+    \item[--] \textbf{Patterns:} Saga, Chain-of-Responsibility, Strategy, Event-Driven, Server-Driven UI, Distributed Locking
+    \item[--] \textbf{Observability \& Infra:} Grafana, Prometheus, Docker, GitHub Actions, GKE basics
+    \item[--] \textbf{Tools:} Git, IntelliJ, Postman, VS Code, \LaTeX
+\end{itemize}
+
+\vspace{-2mm}
+
+{\large \textbf{\begin{tcolorbox}\textsc{Education \& Coursework}\end{tcolorbox}}}
+\vspace{-2mm}
+\begin{center}
+\begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
+\textbf{B.Tech, IIT Kanpur (2020-24)} & Data Structures and Algorithms \\
+Microservices with Spring Boot \& Spring Cloud & Building Scalable Java Microservices \\
+Architecting with Google Kubernetes Engine & Object-Oriented Programming in Java \\
+Operating Systems & Automated Software Testing: Practical Skills \\
+\end{tabular}
+\end{center}
+
+\vspace{-2.5mm}
+
+{\large \textbf{\begin{tcolorbox}\textsc{Achievements}\end{tcolorbox}}}
+\vspace{-2mm}
+\begin{itemize}
+    \item Awarded the \textbf{Dakshana Scholarship} - top \textbf{0.5\% of JNV students} nationwide - for JEE Mains and Advanced coaching.
+    \item Completed a \textbf{7-day Bharat Scouts \& Guides Leadership Camp} (teamwork, communication, leadership).
+    \item Participated in \textbf{Virtual Stock Market}, \textbf{E-Cell '19, IIT Bombay} - hands-on equity trading and market analysis.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,140 @@
+\documentclass[9pt]{extarticle}
+\usepackage[margin=0.2in]{geometry}
+\usepackage{romannum}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{fontawesome}
+\usepackage{tabularx, colortbl}
+\setlist[itemize]{noitemsep, topsep=0pt}
+\addtolength{\parskip}{-1.5mm}
+\tcbset{
+frame code={}
+center title,
+left=0pt,
+right=0pt,
+top=0pt,
+bottom=0pt,
+colback=gray!40,
+colframe=white,
+width=\dimexpr\textwidth\relax,
+enlarge left by=0mm,
+boxsep=3pt,
+arc=0pt,outer arc=0pt,
+}
+
+\begin{document}
+
+\begin{center}
+{\huge\textbf{Sachin}} \\[2pt]
+\textbf{IIT Kanpur} \,$|$\, \textbf{BTech} \,$|$\, \textbf{2020-24} \\[8pt]
+\begin{tabularx}{\textwidth}{@{}>{\centering\arraybackslash}X
+                                  >{\centering\arraybackslash}X
+                                  >{\centering\arraybackslash}X
+                                  >{\centering\arraybackslash}X@{}}
+  \faPhone\ +91-8960455860
+    & \href{mailto:sachin200830@gmail.com}{sachin200830@gmail.com}
+    & \faGithub\ \href{https://github.com/sachina20}{\texttt{sachina20}}
+    & \faLinkedin\ \href{https://www.linkedin.com/in/sachin-601081200/}{Sachin} \\
+\end{tabularx}
+\end{center}
+\noindent\rule[0.5ex]{\linewidth}{1pt}
+
+\vspace{-4mm}
+
+{\large \textbf{\begin{tcolorbox}\textsc{Summary}\end{tcolorbox}}}
+\vspace{-1mm}
+\begin{itemize}
+    \item Backend Software Engineer with \textbf{1 year 10 months} of experience building \textbf{fintech microservices} on \textbf{Java 21}, \textbf{Spring Boot}, \textbf{Kafka}, \textbf{MongoDB}, \textbf{Redis}, and \textbf{Temporal}.
+    \item Hands-on contributor to \textbf{server-driven Mobile BFF}, \textbf{subscription lifecycle}, \textbf{Fixed Deposit}, and \textbf{KYC/AML} integrations powering a live mutual-fund advisory platform.
+    \item Strong in \textbf{REST API design}, \textbf{event-driven systems}, \textbf{TDD (JUnit, Mockito)}, and observability with \textbf{Grafana} and \textbf{Prometheus}.
+\end{itemize}
+
+\vspace{-2mm}
+
+{\large \textbf{\begin{tcolorbox}\textsc{Work Experience}\end{tcolorbox}}}
+
+\hspace{-1.5mm}\textbf{PowerUp Money} (spun off from Uni Card) $|$ \textit{Software Engineer (Backend)}
+\hfill\hfill\textit{Feb'25 - Present}
+\begin{itemize}
+    \item Contributing to the \textbf{Mobile Backend (BFF) service} that aggregates \textbf{20+ internal microservices} into mobile-ready APIs for a mutual-fund advisory and execution platform.
+    \item Implemented modules of the \textbf{Subscription Lifecycle service} (creation, payment, activation, cancellation, refund) using \textbf{Temporal workflows} with the \textbf{Saga pattern} for distributed compensation across \textbf{6+ microservices}.
+    \item Built the \textbf{Razorpay payment integration} - order creation, status polling, and refund flows - and emitted \textbf{Kafka events} to coordinate with repayment, notification, and onboarding services.
+    \item Helped develop the \textbf{Dynamic Offer Engine} using the \textbf{Chain-of-Responsibility} pattern to select personalized plans based on portfolio value, whitelist rules, and family eligibility.
+    \item Built the \textbf{Fixed Deposit module} integrated with \textbf{Upswing (3rd-party)}, including REST contracts, persistence on \textbf{MongoDB}, and orchestration through the BFF layer.
+    \item Integrated \textbf{Hyperverge} for fraud / anti-money-laundering checks during KYC onboarding journeys.
+    \item Wrote custom \textbf{Kafka producers, consumers, and Kafka Connect connectors} to power data pipelines feeding analytics and ML downstream consumers.
+    \item Contributed to a \textbf{Computational Service} replacing \textbf{Snowflake} for selected workloads, helping reduce infra cost from \textbf{\$12k to \$4k / month}.
+    \item Added \textbf{Grafana dashboards} and \textbf{Prometheus alerts} for SLOs on latency, error-rate, and Kafka consumer lag.
+    \item Used \textbf{Redis} for caching, distributed locking on concurrent subscription requests, and rate-limited external calls.
+\end{itemize}
+
+\vspace{2.5mm}
+\hspace{3.5mm}\textbf{Uni Card} $|$ \textit{Software Engineer (Mobile Backend)}
+\hfill\hfill\textit{Jun'24 - Feb'25}
+\begin{itemize}
+    \item Built a \textbf{Server-Driven Backend (Orchestrator)} for the mobile app that talked to downstream services and returned UI-ready response templates, enabling \textbf{dynamic UI updates} without an app release.
+    \item Created \textbf{RESTful APIs} in \textbf{Java + Spring Boot} following a \textbf{microservices architecture}, with documented contracts and versioning.
+    \item Designed and shipped the \textbf{Key Life Event Flow} feature to help users identify financial-freedom milestones.
+    \item Practiced \textbf{Test-Driven Development} with \textbf{JUnit} and \textbf{Mockito} for unit and integration tests; raised coverage on owned modules.
+    \item Participated in \textbf{Merge Request (MR) reviews}, improving readability, test coverage, and adherence to coding guidelines.
+\end{itemize}
+
+\vspace{2.5mm}
+\hspace{3.5mm}\textbf{PwC India Limited} $|$ \textit{Data Analytics Intern}
+\hfill\hfill\textit{May'23 - Jul'23}
+\begin{itemize}
+    \item Collected \textbf{4{,}200+ tweets} using \textbf{Apify} and \textbf{snscrape} for sentiment and entity analysis.
+    \item Performed \textbf{Sentiment Analysis} with \textbf{Azure Text Analytics} and intent classification using \textbf{Hugging Face zero-shot Transformers}.
+    \item Extracted organization mentions with \textbf{spaCy (en\_core\_web\_sm)} and built an interactive \textbf{Power BI dashboard} for stakeholder review.
+\end{itemize}
+
+\vspace{-2mm}
+
+{\large \textbf{\begin{tcolorbox}\textsc{Key Contributions \& Highlights}\end{tcolorbox}}}
+\begin{itemize}
+    \item \textbf{Subscription Service:} Implemented Saga-style compensation flows on \textbf{Temporal}, plus a pluggable rule-validation layer for concurrent requests.
+    \item \textbf{Mobile BFF:} Helped assemble the \textbf{home-screen orchestration engine} that dynamically composes tabs and widgets from portfolio, advisory, KYC, and subscription services.
+    \item \textbf{Onboarding flows:} Worked on \textbf{Portfolio} and \textbf{Advisory} onboarding journeys - state management, consent capture, payment screens.
+    \item \textbf{Observability:} Used \textbf{AOP} annotations (\texttt{@AccessLog}, \texttt{@FailSafe}, \texttt{@RecordMetric}) for structured logging and metrics on hot endpoints.
+\end{itemize}
+
+\vspace{-2mm}
+
+{\large \textbf{\begin{tcolorbox}\textsc{Relevant Coursework}\end{tcolorbox}}}
+\vspace{-2mm}
+\begin{center}
+\begin{tabular}{p{0.45\textwidth} p{0.45\textwidth}}
+Data Structures and Algorithms & Object Oriented Programming in Java \\
+Fundamentals of Programming & Microservices with Spring Boot \& Spring Cloud \\
+Building Scalable Java Microservices & Architecting with Google Kubernetes Engine \\
+Operating Systems & Automated Software Testing: Practical Skills \\
+\end{tabular}
+\end{center}
+
+\vspace{-2.5mm}
+{\large \textbf{\begin{tcolorbox}\textsc{Technical Skills}\end{tcolorbox}}}
+\vspace{-2mm}
+\begin{itemize}
+    \item[--] \textbf{Languages:} Java, C, C++, Python, JavaScript, SQL
+    \item[--] \textbf{Frameworks:} Spring Boot, Spring Cloud, JUnit, Mockito
+    \item[--] \textbf{Datastores:} MongoDB, Redis, MySQL, Snowflake
+    \item[--] \textbf{Messaging \& Workflow:} Apache Kafka, Kafka Connect, Temporal
+    \item[--] \textbf{Observability:} Grafana, Prometheus, AOP-based metrics \& logging
+    \item[--] \textbf{Tools:} Git, GitHub, Docker, IntelliJ, VS Code, Postman, \LaTeX
+\end{itemize}
+
+\vspace{-2mm}
+
+{\large \textbf{\begin{tcolorbox}\textsc{Achievements \& Extracurriculars}\end{tcolorbox}}}
+\vspace{-2mm}
+\begin{itemize}
+    \item Awarded the \textbf{Dakshana Scholarship} - top \textbf{0.5\% of JNV students} nationwide - for JEE Mains \& Advanced coaching.
+    \item Completed a \textbf{7-day Bharat Scouts \& Guides Leadership Camp} (teamwork, communication, leadership).
+    \item Participated in \textbf{Virtual Stock Market}, \textbf{E-Cell '19, IIT Bombay} - equity trading and market analysis.
+\end{itemize}
+
+\end{document}
